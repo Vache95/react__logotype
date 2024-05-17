@@ -1,0 +1,43 @@
+.drawer {
+    background-color: var(--accent-white);
+    position: fixed;
+    width: 22.8rem;
+    height: 100vh;
+    left: -22.8rem;
+    top: 0;
+    z-index: 9999999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: left 0.3s ease;
+}
+
+.open {
+    left: 0;
+    animation: slideIn 0.3s ease;
+}
+
+
+.drawerContainer {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999999;
+    background-color: #fbf9f967;
+}
+
+
+@keyframes slideIn {
+    0% {
+        left: -22.8rem;
+    }
+
+    100% {
+        left: 0;
+    }
+}

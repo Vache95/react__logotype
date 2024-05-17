@@ -1,0 +1,92 @@
+@import '../../app/styles/mixin.scss';
+
+.menu .menu__list {
+    width: 100%;
+    @include flex(space-between);
+}
+
+.menu-container {
+    width: 100%;
+    border-top: 1px solid var(--accent-gray-40);
+    border-bottom: 1px solid var(--accent-gray-40);
+    background-color: var(--accent-white);
+    @include flex;
+    position: sticky;
+    top: -1px;
+    left: 0;
+    z-index: 99999;
+    transition: top 0.5s ease-in-out;
+}
+
+.hidden {
+    top: -100px !important;
+}
+
+.menu__list {
+    &>li>svg {
+        margin-left: 0.28rem;
+        transform: rotate(90deg);
+
+    }
+
+    .list-menu {
+        display: none;
+        position: absolute;
+        padding: 1.4rem;
+        top: 3.8rem;
+        left: 0;
+        width: 12.5rem;
+        height: 12.3rem;
+        border: 1px solid var(--accent-gray-40);
+        z-index: 999;
+        background-color: var(--accent-white);
+
+        li {
+
+            font-weight: 400;
+            font-size: 0.9;
+            padding-bottom: 0.5rem;
+            @include flex(space-between);
+
+            &:hover {
+                color: var(--accent-gray-10);
+                padding-left: 0.5rem;
+            }
+        }
+
+        ul {
+            &>:not(:last-child) {
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid var(--accent-gray-40);
+            }
+        }
+
+    }
+
+
+    &>:not(:last-child) {
+        margin-right: 32px;
+    }
+
+
+
+    &>li {
+        padding: 1.4rem 0 1.4rem 0;
+        font-weight: 500;
+        font-size: 1.14rem;
+        cursor: pointer;
+        position: relative;
+
+        &:hover .list-menu {
+            display: block;
+
+        }
+    }
+
+}
+
+@media(max-width:1024px) {
+    .menu-container {
+        display: none;
+    }
+}

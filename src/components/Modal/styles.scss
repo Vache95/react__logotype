@@ -1,0 +1,51 @@
+@import '../../app/styles/mixin.scss';
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #fbf9f967;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    display: flex;
+    align-items: center;
+}
+
+.modal {
+    z-index: 100;
+    background: #fff;
+    position: relative;
+    margin: auto;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 80%;
+    padding: 1rem;
+    border: 1px solid var(--accent-gray-40);
+}
+
+.modal-header {
+    @include flex(space-between);
+    margin-bottom: 2rem;
+}
+
+.modal-close-button {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
