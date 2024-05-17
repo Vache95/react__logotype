@@ -1,18 +1,10 @@
 
-import { lazy } from 'react';
 import SkeletonComponent from 'components/ui/Skeleton'
-import useModal from 'hooks/useModal'
 import './styles.scss';
 
 import PostCard from './PostCard'
 
-const Modal = lazy(() => import(/* webpackChunkName: "Modal" */ 'components/Modal'));
-
-const Posts = ({ posts,loading }) => {
-
-  const { isShowing, toggle, data } = useModal();
-
-  return (
+const Posts = ({ posts, loading, handleModal }) => (
     <div className='posts'>
           {loading ?
             Array.from({ length: 3 }).map((_, index) => (
@@ -31,19 +23,12 @@ const Posts = ({ posts,loading }) => {
                   date={date}
                   views={views}
                   text={text}
-                  onClick={toggle}
+                  onClick={handleModal}
                 />
               )) : <h2>Noth Found</h2>
           }
-        <Modal
-          isShowing={isShowing}
-          hide={toggle}
-          title={data?.title}
-        >
-          <p>{data?.text}</p>
-        </Modal>
     </div>
   )
-}
+
 
 export default Posts
