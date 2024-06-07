@@ -3,8 +3,8 @@ import axios from 'axios';
 const instance = axios.create({
 	baseURL: process.env.REACT_APP_BASE_URL,
 	headers: {
-        'content-type': 'application/json'
-    },
+		'content-type': 'application/json',
+	},
 	params: {},
 });
 
@@ -18,4 +18,4 @@ instance.interceptors.response.use(
 	async err => Promise.reject(err),
 );
 
-export default instance; 
+export default instance;

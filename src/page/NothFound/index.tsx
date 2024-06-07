@@ -1,6 +1,6 @@
 import './styles.scss'
 
-const NotFoundPage = () => (
+const NotFoundPage:React.FC = () => (
     <div className="not-found">
         <h3>Not Found</h3>
     </div>

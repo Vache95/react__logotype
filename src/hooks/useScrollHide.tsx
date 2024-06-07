@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const useScrollHide = (wrapperRef, threshold = 200) => {
+export const useScrollHide = (wrapperRef: any, threshold: any = 200) => {
   const [isHidden, setIsHidden] = useState(false);
   const lastScrollY = useRef(0);
 
@@ -34,7 +34,7 @@ const useScrollHide = (wrapperRef, threshold = 200) => {
         wrapper.removeEventListener('scroll', handleScroll);
       }
     };
-    
+
   }, [wrapperRef, threshold]);
 
 
@@ -42,4 +42,3 @@ const useScrollHide = (wrapperRef, threshold = 200) => {
   return isHidden;
 };
 
-export default useScrollHide;

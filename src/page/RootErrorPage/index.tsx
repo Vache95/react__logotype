@@ -1,7 +1,7 @@
 import { useRouteError } from 'react-router-dom';
 import './styles.scss';
 
-const RootErrorPage = () => {
+const RootErrorPage: React.FC = () => {
 	const error = useRouteError();
 
 	let errorDetails;
@@ -13,9 +13,9 @@ const RootErrorPage = () => {
 	return (
 		<div className='root-error'>
 			<div>
-                <p>Something went wrong!</p>
-                <span>{errorDetails}</span>
-            </div>
+				<p>Something went wrong!</p>
+				<span>{errorDetails}</span>
+			</div>
 		</div>
 	);
 };

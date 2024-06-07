@@ -1,177 +1,176 @@
+
 import {ReactComponent as Arrow}  from 'assets/svg/arrow.svg'
 
-//routes
+
 export const HOME = '/';
 export const NOT_FOUND = '*';
 
-//endpoint url
+
 export const POSTS_URL = 'endpoint/react/data.json';
 
-
-//menu list
 export const MENU_LIST = [
     {
-        text:"Demos",
+        label:"Demos",
         path:'',
         icon:<Arrow/>,
         sub_list:[
             {
-                text:"Post Header",
+                label:"Post Header",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Post Layout",
+                label:"Post Layout",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Share Buttons",
+                label:"Share Buttons",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Gallery Post",
+                label:"Gallery Post",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Video Post",
+                label:"Video Post",
                 path:'',
                 icon:<Arrow/>  
             }
         ]
     },
     {
-        text:"Post",
+        label:"Post",
         path:'',
         icon:<Arrow/>,
         sub_list:[
             {
-                text:"Post Header",
+                label:"Post Header",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Post Layout",
+                label:"Post Layout",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Share Buttons",
+                label:"Share Buttons",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Gallery Post",
+                label:"Gallery Post",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Video Post",
+                label:"Video Post",
                 path:'',
                 icon:<Arrow/>  
             }
         ]
     },
     {
-        text:"Features",
+        label:"Features",
         path:'',
         icon:<Arrow/>,
         sub_list:[
             {
-                text:"Post Header",
+                label:"Post Header",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Post Layout",
+                label:"Post Layout",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Share Buttons",
+                label:"Share Buttons",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Gallery Post",
+                label:"Gallery Post",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Video Post",
+                label:"Video Post",
                 path:'',
                 icon:<Arrow/>  
             }
         ]
     },
     {
-        text:"Categories",
+        label:"Categories",
         path:'',
         icon:<Arrow/>,
         sub_list:[
             {
-                text:"Post Header",
+                label:"Post Header",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Post Layout",
+                label:"Post Layout",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Share Buttons",
+                label:"Share Buttons",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Gallery Post",
+                label:"Gallery Post",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Video Post",
+                label:"Video Post",
                 path:'',
                 icon:<Arrow/>  
             }
         ]
     },
     {
-        text:"Shop",
+        label:"Shop",
         path:'',
         icon:<Arrow/>,
         sub_list:[
             {
-                text:"Post Header",
+                label:"Post Header",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Post Layout",
+                label:"Post Layout",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Share Buttons",
+                label:"Share Buttons",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Gallery Post",
+                label:"Gallery Post",
                 path:'',
                 icon:<Arrow/>  
             },
             {
-                text:"Video Post",
+                label:"Video Post",
                 path:'',
                 icon:<Arrow/>  
             }
         ]
     },
     {
-        text:"Buy Now",
+        label:"Buy Now",
         path:'',
         icon:null,
         sub_list:null

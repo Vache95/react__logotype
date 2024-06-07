@@ -1,30 +1,30 @@
 import { useEffect, useState } from "react";
 
-const useModal = () => {
+export const useModal = () => {
 
-  const [isShowing, setIsShowing] = useState(false);
-  const [data,setData] = useState({})
+  const [isShowing, setIsShowing] = useState<boolean>(false);
+  const [data, setData] = useState<{ title: string, text: string } | null>(null)
 
-  const toggle = (item) => {
+  const toggle = (item?: { title: string, text: string }) => {
     setIsShowing(!isShowing);
-    if(item){
+    if (item) {
       setData({
-        title:item?.title,
-        text:item?.text
-    })
+        title: item?.title,
+        text: item?.text
+      })
     }
   }
 
   useEffect(() => {
-    if(isShowing){
+    if (isShowing) {
       window.document.body.style.overflow = "hidden"
-    }else{
+    } else {
       window.document.body.style.overflow = "auto"
     }
     return (() => {
       window.document.body.style.overflow = "auto"
     })
-  },[isShowing])
+  }, [isShowing])
 
 
   return {
@@ -34,4 +34,3 @@ const useModal = () => {
   };
 };
 
-export default useModal;
